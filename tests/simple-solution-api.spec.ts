@@ -239,13 +239,15 @@ test('check DELETE request with invalid API key should receive code 401', async 
 
 //GET
 
-test('check GET request to authenticate user with valid username and password should receive code 200 and return apiKey', async ({ request }) => {
-  const response = await request.get('https://backend.tallinn-learning.ee/test-orders?username=Alex&password=8888');
+test('check GET request to authenticate user with valid username and password should receive code 200 and return apiKey', async ({
+  request,
+}) => {
+  const response = await request.get(
+    'https://backend.tallinn-learning.ee/test-orders?username=Alex&password=8888',
+  )
 
   console.log('response status:', response.status())
   console.log('response body:', await response.json())
-  expect(response.status()).toBe(StatusCodes.OK);
-  expect(await response.json()).toHaveProperty('apiKey');
+  expect(response.status()).toBe(StatusCodes.OK)
+  expect(await response.json()).toHaveProperty('apiKey')
 })
-
-
