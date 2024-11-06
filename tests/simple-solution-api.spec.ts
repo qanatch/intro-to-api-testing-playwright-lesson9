@@ -56,7 +56,6 @@ test('post order with correct data should receive code 201', async ({ request })
   expect.soft(responseBody.courierId).toBeDefined()
   expect.soft(responseBody.customerName).toBeDefined()
   expect(response.status()).toBe(StatusCodes.OK)
-
 })
 
 test('post order with incorrect data should receive code 201', async ({ request }) => {

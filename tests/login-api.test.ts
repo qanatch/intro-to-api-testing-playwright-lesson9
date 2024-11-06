@@ -23,5 +23,4 @@ test.describe('Tallinn delivery API tests', () => {
     //const responseBody = await response.text()
     expect(response.status()).toBe(401)
   })
-
 })
