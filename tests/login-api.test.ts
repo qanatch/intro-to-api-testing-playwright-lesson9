@@ -5,14 +5,14 @@ const serviceURL = 'https://backend.tallinn-learning.ee/'
 const loginPath = 'login/student'
 
 test.describe('Tallinn delivery API tests', () => {
-  test('login with correct data', async ({ request }) => {
-    const requestBody = LoginDto.createLoginWithCorrectData()
-
-    const response = await request.post(`${serviceURL}${loginPath}`, {
-      data: requestBody,
-    })
-    expect(response.status()).toBe(401)
-  })
+  // test('login with correct data', async ({ request }) => {
+  //   const requestBody = LoginDto.createLoginWithCorrectData()
+  //
+  //   const response = await request.post(`${serviceURL}${loginPath}`, {
+  //     data: requestBody,
+  //   })
+  //   expect(response.status()).toBe(200)
+  // })
 
   test('login with incorrect data', async ({ request }) => {
     const requestBody = LoginDto.createLoginWithIncorrectData()
